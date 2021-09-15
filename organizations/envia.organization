@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="envia" description="Satisfacemos las necesidades y expectativas de nuestros Clientes, con soluciones logísticas innovadoras, contribuyendo a la transformación del país.&#xA;&#xA;">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="recoleccion">
+      <firstName>Jaime</firstName>
+      <lastName>Ruiz</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="reparto">
+      <firstName>Carlos </firstName>
+      <lastName>Daza</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="origen">
+      <firstName>David </firstName>
+      <lastName>Pardo</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="destino">
+      <firstName>Octavio</firstName>
+      <lastName>Chica</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="transporte">
+      <firstName>Carlos </firstName>
+      <lastName>Ramirez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="Transportadores">
+      <displayName>Transportadores</displayName>
+    </role>
+    <role name="Ruta de recoleccion">
+      <displayName>Ruta de recoleccion</displayName>
+    </role>
+    <role name="Regional Origen">
+      <displayName>Regional Origen</displayName>
+    </role>
+    <role name="Regonal destino">
+      <displayName>Regonal destino</displayName>
+    </role>
+    <role name="Ruta de reparto">
+      <displayName>Ruta de reparto</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="Reparto">
+      <displayName>Reparto</displayName>
+    </group>
+    <group name="Transporte">
+      <displayName>Transporte</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>recoleccion</userName>
+      <roleName>Ruta de recoleccion</roleName>
+      <groupName>Reparto</groupName>
+    </membership>
+    <membership>
+      <userName>reparto</userName>
+      <roleName>Ruta de reparto</roleName>
+      <groupName>Reparto</groupName>
+    </membership>
+    <membership>
+      <userName>origen</userName>
+      <roleName>Regional Origen</roleName>
+      <groupName>Reparto</groupName>
+    </membership>
+    <membership>
+      <userName>destino</userName>
+      <roleName>Regonal destino</roleName>
+      <groupName>Reparto</groupName>
+    </membership>
+    <membership>
+      <userName>transporte</userName>
+      <roleName>Transportadores</roleName>
+      <groupName>Transporte</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>
