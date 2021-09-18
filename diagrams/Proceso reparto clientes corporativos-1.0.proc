@@ -106,7 +106,7 @@
         </elements>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_dL-jwBTnEey_Wfpuv-ZzVQ" name="Bodega regional destino" actor="_CFKAABWuEey_Wfpuv-ZzVQ">
-        <elements xmi:type="process:CallActivity" xmi:id="_X6Mu0BTsEey_Wfpuv-ZzVQ" name="Descargar y clasificar paquetes destino" outgoing="_clyUMBTsEey_Wfpuv-ZzVQ" incoming="_C21-oBWNEey_Wfpuv-ZzVQ" type="PARALLEL">
+        <elements xmi:type="process:CallActivity" xmi:id="_X6Mu0BTsEey_Wfpuv-ZzVQ" name="Descargar y clasificar paquetes destino" outgoing="_clyUMBTsEey_Wfpuv-ZzVQ" incoming="_C21-oBWNEey_Wfpuv-ZzVQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_X6Mu0RTsEey_Wfpuv-ZzVQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_X6Mu0hTsEey_Wfpuv-ZzVQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_X6Mu0xTsEey_Wfpuv-ZzVQ" name="" content="" returnTypeFixed="true"/>
