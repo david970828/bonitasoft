@@ -47,6 +47,13 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="cliente">
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="Transportadores">
@@ -98,6 +105,11 @@
       <userName>transporte</userName>
       <roleName>Transportadores</roleName>
       <groupName>Transporte</groupName>
+    </membership>
+    <membership>
+      <userName>cliente</userName>
+      <roleName>Ruta de recoleccion</roleName>
+      <groupName>Reparto</groupName>
     </membership>
   </memberships>
 </organization:Organization>
