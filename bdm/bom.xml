@@ -12,5 +12,28 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="com.company.model.Guias">
+            <fields>
+                <field type="STRING" length="255" name="id_guia" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="documento_destinatario" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombre_destinatario" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="direccion_destinatario" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="telefono_destinatario" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="peso_guia" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="clasificacion_guia" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="contenido_guia" nullable="true" collection="false"/>
+                <field type="DATE" length="255" name="fecha_admision" nullable="true" collection="false"/>
+                <field type="DATE" length="255" name="fecha_entrega" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="destino_guia" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="estado_guia" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="valor_declarado" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="valor_servicio" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="documento_relacionado" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="id_solicitud" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
     </businessObjects>
 </businessObjectModel>
