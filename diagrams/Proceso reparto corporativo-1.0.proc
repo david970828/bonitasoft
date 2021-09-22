@@ -920,6 +920,12 @@
               <user>destino</user>
             </users>
           </actorMapping>
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_sOsqwBvnEeyfPeUf2yLptA" name="Reparto">
+            <groups xmi:type="actormapping:Groups" xmi:id="_sOsqwRvnEeyfPeUf2yLptA"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_sOsqwhvnEeyfPeUf2yLptA"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_sOsqwxvnEeyfPeUf2yLptA"/>
+            <users xmi:type="actormapping:Users" xmi:id="_sOsqxBvnEeyfPeUf2yLptA"/>
+          </actorMapping>
         </actorMappings>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_RjgiURtqEeyzbJ3SaIGN8w" type="CONNECTOR" definitionId="rest-post" definitionVersion="1.1.0" implementationId="rest-post-impl" implementationVersion="1.0.10"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_RjgiUhtqEeyzbJ3SaIGN8w" type="CONNECTOR" definitionId="email" definitionVersion="1.2.0" implementationId="email-impl" implementationVersion="1.3.0"/>
@@ -1416,7 +1422,7 @@
       <connections xmi:type="process:SequenceFlow" xmi:id="_ohaP4BpWEey_Wfpuv-ZzVQ" name="SI" target="_ohUwUBpWEey_Wfpuv-ZzVQ" source="_l_fswBpWEey_Wfpuv-ZzVQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_ohd6QBpWEey_Wfpuv-ZzVQ"/>
         <condition xmi:type="expression:Expression" xmi:id="_ohd6QRpWEey_Wfpuv-ZzVQ" name="transporte - Transporte#isHayNovedad" content="isHayNovedad" interpreter="GROOVY" type="TYPE_JAVA_METHOD_CALL" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_AFnH4BtFEeyg9bKG5gNlwg" name="transporte" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.Transporte"/>
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_PbP4EBvoEeyfPeUf2yLptA" name="transporte" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.Transporte"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_SFU6kBrpEey_Wfpuv-ZzVQ" target="_SiW00BrpEey_Wfpuv-ZzVQ" source="_ohUwUBpWEey_Wfpuv-ZzVQ">
@@ -1917,8 +1923,13 @@
             </users>
           </actorMapping>
         </actorMappings>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_sSlsQBvnEeyfPeUf2yLptA" type="CONNECTOR" definitionId="rest-put" definitionVersion="1.1.0" implementationId="rest-put-impl" implementationVersion="1.0.10"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_RYtAgRtqEeyzbJ3SaIGN8w" id="ACTOR_FILTER"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_RYtAghtqEeyzbJ3SaIGN8w" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_RYtAghtqEeyzbJ3SaIGN8w" id="CONNECTOR">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_sTKUABvnEeyfPeUf2yLptA" id="rest-put-impl-1.0.10">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTmY4BvnEeyfPeUf2yLptA" key="rest-put-impl -- 1.0.10" value="bonita-connector-rest-1.0.10.jar" type="CONNECTOR"/>
+          </children>
+        </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_RYtAgxtqEeyzbJ3SaIGN8w" id="GROOVY_SCRIPT"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_RYtAhBtqEeyzbJ3SaIGN8w" id="OTHER"/>
         <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_RYtAhRtqEeyzbJ3SaIGN8w" id="GROOVY_SCRIPT"/>
