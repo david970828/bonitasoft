@@ -800,6 +800,104 @@
         <dynamicLabel xmi:type="expression:Expression" xmi:id="_VE-h0hpVEey_Wfpuv-ZzVQ" name="" content="" returnTypeFixed="true"/>
         <dynamicDescription xmi:type="expression:Expression" xmi:id="_VE-h0RpVEey_Wfpuv-ZzVQ" name="" content="" returnTypeFixed="true"/>
         <stepSummary xmi:type="expression:Expression" xmi:id="_VE-h0xpVEey_Wfpuv-ZzVQ" name="" content="" returnTypeFixed="true"/>
+        <connectors xmi:type="process:Connector" xmi:id="_m_hjgBtgEeyeze6kE11dOg" name="ConectarSalesforce" definitionId="salesforce-createsobject" event="ON_FINISH" definitionVersion="1.0.1">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_m_hjgRtgEeyeze6kE11dOg" definitionId="salesforce-createsobject" version="1.0.1" modelVersion="7.12.0-004">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjghtgEeyeze6kE11dOg" key="username">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjgxtgEeyeze6kE11dOg" name="freddpe@hotmail.com" content="freddpe@hotmail.com"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjhBtgEeyeze6kE11dOg" key="password">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjhRtgEeyeze6kE11dOg" name="Control2025*" content="Control2025*"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjhhtgEeyeze6kE11dOg" key="securityToken">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjhxtgEeyeze6kE11dOg" name="bLnUt2y9Ry4zSIfRGQImBB1R" content="bLnUt2y9Ry4zSIfRGQImBB1R"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjiBtgEeyeze6kE11dOg" key="authEndpoint">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjiRtgEeyeze6kE11dOg" name="https://login.salesforce.com/services/Soap/u/24.0" content="https://login.salesforce.com/services/Soap/u/24.0"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjihtgEeyeze6kE11dOg" key="serviceEndpoint">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjixtgEeyeze6kE11dOg" name="https://login.salesforce.com/services/Soap/u/24.0" content="https://login.salesforce.com/services/Soap/u/24.0"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjjBtgEeyeze6kE11dOg" key="restEndpoint">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjjRtgEeyeze6kE11dOg" content="" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjjhtgEeyeze6kE11dOg" key="proxyHost">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjjxtgEeyeze6kE11dOg" content="" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjkBtgEeyeze6kE11dOg" key="proxyPort">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjkRtgEeyeze6kE11dOg" name="0" content="0" returnType="java.lang.Integer" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjkhtgEeyeze6kE11dOg" key="proxyUsername">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjkxtgEeyeze6kE11dOg" content="" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjlBtgEeyeze6kE11dOg" key="proxyPassword">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjlRtgEeyeze6kE11dOg" content="" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjlhtgEeyeze6kE11dOg" key="connectionTimeout">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjlxtgEeyeze6kE11dOg" name="0" content="0" returnType="java.lang.Integer" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjmBtgEeyeze6kE11dOg" key="readTimeout">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjmRtgEeyeze6kE11dOg" name="0" content="0" returnType="java.lang.Integer" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjmhtgEeyeze6kE11dOg" key="sObjectType">
+              <expression xmi:type="expression:Expression" xmi:id="_m_hjmxtgEeyeze6kE11dOg" name="Case" content="Case" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_m_hjnBtgEeyeze6kE11dOg" key="fieldValues">
+              <expression xmi:type="expression:TableExpression" xmi:id="_m_hjnRtgEeyeze6kE11dOg">
+                <expressions xmi:type="expression:ListExpression" xmi:id="_m_hjnhtgEeyeze6kE11dOg">
+                  <expressions xmi:type="expression:Expression" xmi:id="_m_hjnxtgEeyeze6kE11dOg" name="idSolicitud__c" content="idSolicitud__c"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_m_hjoBtgEeyeze6kE11dOg" name="idSolicitud()" content="reglaNovedad.idSolicitud" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_m_hjoRtgEeyeze6kE11dOg" name="reglaNovedad" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+                  </expressions>
+                </expressions>
+                <expressions xmi:type="expression:ListExpression" xmi:id="_m_hjohtgEeyeze6kE11dOg">
+                  <expressions xmi:type="expression:Expression" xmi:id="_m_hjoxtgEeyeze6kE11dOg" name="ProveedorName__c" content="ProveedorName__c"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_m_hjpBtgEeyeze6kE11dOg" name="Cliente()" content="reglaNovedad.cliente" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_m_hjpRtgEeyeze6kE11dOg" name="reglaNovedad" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+                  </expressions>
+                </expressions>
+                <expressions xmi:type="expression:ListExpression" xmi:id="_m_hjphtgEeyeze6kE11dOg">
+                  <expressions xmi:type="expression:Expression" xmi:id="_m_hjpxtgEeyeze6kE11dOg" name="CreatedDate" content="CreatedDate"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_m_hjqBtgEeyeze6kE11dOg" name="fechadeRecoleccion()" content="reglaNovedad.fecha_recoleccion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_m_hjqRtgEeyeze6kE11dOg" name="reglaNovedad" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+                  </expressions>
+                </expressions>
+              </expression>
+            </parameters>
+          </configuration>
+          <outputs xmi:type="expression:Operation" xmi:id="_m_hjqhtgEeyeze6kE11dOg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_m_hjqxtgEeyeze6kE11dOg" name="reglaNovedad" content="reglaNovedad" type="TYPE_VARIABLE" returnType="com.company.model.BusinessObject">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_m_hjrBtgEeyeze6kE11dOg" name="reglaNovedad" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_m_hjrRtgEeyeze6kE11dOg" name="idSolicitudSC()" content="reglaNovedad.idSolicitud" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_m_hjrhtgEeyeze6kE11dOg" name="reglaNovedad" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_m_hjrxtgEeyeze6kE11dOg" type="JAVA_METHOD" expression="setIdSolicitud">
+              <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
+          </outputs>
+          <outputs xmi:type="expression:Operation" xmi:id="_m_hjsBtgEeyeze6kE11dOg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_m_hjsRtgEeyeze6kE11dOg" name="reglaNovedad" content="reglaNovedad" type="TYPE_VARIABLE" returnType="com.company.model.BusinessObject">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_m_hjshtgEeyeze6kE11dOg" name="reglaNovedad" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_m_hjsxtgEeyeze6kE11dOg" name="nameProveedorSC()" content="reglaNovedad.cliente" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_m_hjtBtgEeyeze6kE11dOg" name="reglaNovedad" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_m_hjtRtgEeyeze6kE11dOg" type="JAVA_METHOD" expression="setCliente">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </outputs>
+          <outputs xmi:type="expression:Operation" xmi:id="_m_hjthtgEeyeze6kE11dOg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_m_hjtxtgEeyeze6kE11dOg" name="reglaNovedad" content="reglaNovedad" type="TYPE_VARIABLE" returnType="com.company.model.BusinessObject">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_m_hjuBtgEeyeze6kE11dOg" name="reglaNovedad" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_m_hjuRtgEeyeze6kE11dOg" name="fechadeRecoleccionSC()" content="reglaNovedad.fecha_recoleccion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.Date">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_m_hjuhtgEeyeze6kE11dOg" name="reglaNovedad" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_m_hjuxtgEeyeze6kE11dOg" type="JAVA_METHOD" expression="setFecha_recoleccion">
+              <inputTypes>java.util.Date</inputTypes>
+            </operator>
+          </outputs>
+        </connectors>
         <operations xmi:type="expression:Operation" xmi:id="_Qx9sExsnEeyg0PMT-ow3DQ">
           <leftOperand xmi:type="expression:Expression" xmi:id="_Qx9sFBsnEeyg0PMT-ow3DQ" name="transporte" content="transporte" type="TYPE_VARIABLE" returnType="com.company.model.Transporte">
             <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Qx9sFRsnEeyg0PMT-ow3DQ" name="transporte" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.Transporte"/>
@@ -822,6 +920,39 @@
             <inputTypes>java.lang.String</inputTypes>
           </operator>
         </operations>
+        <operations xmi:type="expression:Operation" xmi:id="_P2j5UxtfEeyeze6kE11dOg">
+          <leftOperand xmi:type="expression:Expression" xmi:id="_P2j5VBtfEeyeze6kE11dOg" name="reglaNovedad" content="reglaNovedad" type="TYPE_VARIABLE" returnType="com.company.model.BusinessObject">
+            <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_P2j5VRtfEeyeze6kE11dOg" name="reglaNovedad" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+          </leftOperand>
+          <rightOperand xmi:type="expression:Expression" xmi:id="_P2j5VhtfEeyeze6kE11dOg" name="reglaNovedadInput.fecha_recoleccion" content="reglaNovedadInput?.fecha_recoleccion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.Date">
+            <referencedElements xmi:type="process:ContractInput" xmi:id="_P2j5VxtfEeyeze6kE11dOg" name="reglaNovedadInput" type="COMPLEX" createMode="false"/>
+          </rightOperand>
+          <operator xmi:type="expression:Operator" xmi:id="_P2j5WBtfEeyeze6kE11dOg" type="JAVA_METHOD" expression="setFecha_recoleccion">
+            <inputTypes>java.util.Date</inputTypes>
+          </operator>
+        </operations>
+        <operations xmi:type="expression:Operation" xmi:id="_P2j5WRtfEeyeze6kE11dOg">
+          <leftOperand xmi:type="expression:Expression" xmi:id="_P2j5WhtfEeyeze6kE11dOg" name="reglaNovedad" content="reglaNovedad" type="TYPE_VARIABLE" returnType="com.company.model.BusinessObject">
+            <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_P2j5WxtfEeyeze6kE11dOg" name="reglaNovedad" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+          </leftOperand>
+          <rightOperand xmi:type="expression:Expression" xmi:id="_P2j5XBtfEeyeze6kE11dOg" name="reglaNovedadInput.idSolicitud" content="reglaNovedadInput?.idSolicitud" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+            <referencedElements xmi:type="process:ContractInput" xmi:id="_P2j5XRtfEeyeze6kE11dOg" name="reglaNovedadInput" type="COMPLEX" createMode="false"/>
+          </rightOperand>
+          <operator xmi:type="expression:Operator" xmi:id="_P2j5XhtfEeyeze6kE11dOg" type="JAVA_METHOD" expression="setIdSolicitud">
+            <inputTypes>java.lang.Integer</inputTypes>
+          </operator>
+        </operations>
+        <operations xmi:type="expression:Operation" xmi:id="_P2j5XxtfEeyeze6kE11dOg">
+          <leftOperand xmi:type="expression:Expression" xmi:id="_P2j5YBtfEeyeze6kE11dOg" name="reglaNovedad" content="reglaNovedad" type="TYPE_VARIABLE" returnType="com.company.model.BusinessObject">
+            <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_P2j5YRtfEeyeze6kE11dOg" name="reglaNovedad" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+          </leftOperand>
+          <rightOperand xmi:type="expression:Expression" xmi:id="_P2j5YhtfEeyeze6kE11dOg" name="reglaNovedadInput.cliente" content="reglaNovedadInput?.cliente" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+            <referencedElements xmi:type="process:ContractInput" xmi:id="_P2j5YxtfEeyeze6kE11dOg" name="reglaNovedadInput" type="COMPLEX" createMode="false"/>
+          </rightOperand>
+          <operator xmi:type="expression:Operator" xmi:id="_P2j5ZBtfEeyeze6kE11dOg" type="JAVA_METHOD" expression="setCliente">
+            <inputTypes>java.lang.String</inputTypes>
+          </operator>
+        </operations>
         <loopCondition xmi:type="expression:Expression" xmi:id="_VE-h1BpVEey_Wfpuv-ZzVQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         <loopMaximum xmi:type="expression:Expression" xmi:id="_VE-h1RpVEey_Wfpuv-ZzVQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
         <cardinalityExpression xmi:type="expression:Expression" xmi:id="_VE-h1hpVEey_Wfpuv-ZzVQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -834,6 +965,11 @@
           <inputs xmi:type="process:ContractInput" xmi:id="_Qx9sEBsnEeyg0PMT-ow3DQ" name="transporteInput" type="COMPLEX" dataReference="transporte">
             <inputs xmi:type="process:ContractInput" xmi:id="_Qx9sERsnEeyg0PMT-ow3DQ" name="hayNovedad" type="BOOLEAN"/>
             <inputs xmi:type="process:ContractInput" xmi:id="_Qx9sEhsnEeyg0PMT-ow3DQ" name="novedad"/>
+          </inputs>
+          <inputs xmi:type="process:ContractInput" xmi:id="_P2jSQBtfEeyeze6kE11dOg" name="reglaNovedadInput" type="COMPLEX" dataReference="reglaNovedad" createMode="false">
+            <inputs xmi:type="process:ContractInput" xmi:id="_P2j5UBtfEeyeze6kE11dOg" name="fecha_recoleccion" type="DATE" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_P2j5URtfEeyeze6kE11dOg" name="idSolicitud" type="INTEGER" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_P2j5UhtfEeyeze6kE11dOg" name="cliente" createMode="false"/>
           </inputs>
         </contract>
         <expectedDuration xmi:type="expression:Expression" xmi:id="_XIIsaxpVEey_Wfpuv-ZzVQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
