@@ -2121,7 +2121,9 @@
               </expression>
             </parameters>
             <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_KiB4qhvjEeyzbJ3SaIGN8w" key="body">
-              <expression xmi:type="expression:Expression" xmi:id="_KiB4qxvjEeyzbJ3SaIGN8w" name="BODEGA" content="BODEGA" returnTypeFixed="true"/>
+              <expression xmi:type="expression:Expression" xmi:id="_KiB4qxvjEeyzbJ3SaIGN8w" name="descargue - Descargue#getNovedad" content="getNovedad" interpreter="GROOVY" type="TYPE_JAVA_METHOD_CALL" returnTypeFixed="true">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_4PvRgBzpEeyzbJ3SaIGN8w" name="descargue" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.Descargue"/>
+              </expression>
             </parameters>
             <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_KiB4rBvjEeyzbJ3SaIGN8w" key="do_not_follow_redirect">
               <expression xmi:type="expression:Expression" xmi:id="_KiB4rRvjEeyzbJ3SaIGN8w" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -2229,11 +2231,26 @@
             <operator xmi:type="expression:Operator" xmi:id="_KiDGxxvjEeyzbJ3SaIGN8w" type="ASSIGNMENT"/>
           </outputs>
         </connectors>
-        <operations xmi:type="expression:Operation" xmi:id="_3xLj0htVEey4HNSlVx0Eyg">
-          <leftOperand xmi:type="expression:Expression" xmi:id="_3xLj0xtVEey4HNSlVx0Eyg" name="" content=""/>
-          <rightOperand xmi:type="expression:Expression" xmi:id="_3xLj1RtVEey4HNSlVx0Eyg" name="descargueInput.hayNovedad" content="     ?.hayNovedad" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean"/>
-          <operator xmi:type="expression:Operator" xmi:id="_3xLj1xtVEey4HNSlVx0Eyg" type="JAVA_METHOD" expression="setHayNovedad">
+        <operations xmi:type="expression:Operation" xmi:id="_dbYowBzqEeyzbJ3SaIGN8w">
+          <leftOperand xmi:type="expression:Expression" xmi:id="_dbYowRzqEeyzbJ3SaIGN8w" name="descargue" content="descargue" type="TYPE_VARIABLE" returnType="com.company.model.Descargue">
+            <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_dbYowhzqEeyzbJ3SaIGN8w" name="descargue" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.Descargue"/>
+          </leftOperand>
+          <rightOperand xmi:type="expression:Expression" xmi:id="_dbYowxzqEeyzbJ3SaIGN8w" name="descargueInput.hayNovedad" content="descargueInput?.hayNovedad" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+            <referencedElements xmi:type="process:ContractInput" xmi:id="_dbYoxBzqEeyzbJ3SaIGN8w" name="descargueInput" type="COMPLEX" createMode="false"/>
+          </rightOperand>
+          <operator xmi:type="expression:Operator" xmi:id="_dbYoxRzqEeyzbJ3SaIGN8w" type="JAVA_METHOD" expression="setHayNovedad">
             <inputTypes>java.lang.Boolean</inputTypes>
+          </operator>
+        </operations>
+        <operations xmi:type="expression:Operation" xmi:id="_dbYoxhzqEeyzbJ3SaIGN8w">
+          <leftOperand xmi:type="expression:Expression" xmi:id="_dbYoxxzqEeyzbJ3SaIGN8w" name="descargue" content="descargue" type="TYPE_VARIABLE" returnType="com.company.model.Descargue">
+            <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_dbYoyBzqEeyzbJ3SaIGN8w" name="descargue" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.Descargue"/>
+          </leftOperand>
+          <rightOperand xmi:type="expression:Expression" xmi:id="_dbYoyRzqEeyzbJ3SaIGN8w" name="descargueInput.novedad" content="descargueInput?.novedad" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+            <referencedElements xmi:type="process:ContractInput" xmi:id="_dbYoyhzqEeyzbJ3SaIGN8w" name="descargueInput" type="COMPLEX" createMode="false"/>
+          </rightOperand>
+          <operator xmi:type="expression:Operator" xmi:id="_dbYoyxzqEeyzbJ3SaIGN8w" type="JAVA_METHOD" expression="setNovedad">
+            <inputTypes>java.lang.String</inputTypes>
           </operator>
         </operations>
         <loopCondition xmi:type="expression:Expression" xmi:id="_59VxFBqfEey_Wfpuv-ZzVQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -2244,7 +2261,12 @@
         <formMapping xmi:type="process:FormMapping" xmi:id="_Z9jlSRqgEey_Wfpuv-ZzVQ">
           <targetForm xmi:type="expression:Expression" xmi:id="_dC5w8BziEeyzbJ3SaIGN8w" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
         </formMapping>
-        <contract xmi:type="process:Contract" xmi:id="_Z9jlSBqgEey_Wfpuv-ZzVQ"/>
+        <contract xmi:type="process:Contract" xmi:id="_Z9jlSBqgEey_Wfpuv-ZzVQ">
+          <inputs xmi:type="process:ContractInput" xmi:id="_dbYBsBzqEeyzbJ3SaIGN8w" name="descargueInput" type="COMPLEX" dataReference="descargue" createMode="false">
+            <inputs xmi:type="process:ContractInput" xmi:id="_dbYBsRzqEeyzbJ3SaIGN8w" name="hayNovedad" type="BOOLEAN" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_dbYBshzqEeyzbJ3SaIGN8w" name="novedad" createMode="false"/>
+          </inputs>
+        </contract>
         <expectedDuration xmi:type="expression:Expression" xmi:id="_Z9jlSxqgEey_Wfpuv-ZzVQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
       </elements>
       <elements xmi:type="process:XORGateway" xmi:id="_nv9lMBqgEey_Wfpuv-ZzVQ" name="¿Existen novedades?" outgoing="_64GwMBqfEey_Wfpuv-ZzVQ _Xk6A0BwqEeyzbJ3SaIGN8w" incoming="_6gHuABqfEey_Wfpuv-ZzVQ">
@@ -2432,7 +2454,9 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_64GwMBqfEey_Wfpuv-ZzVQ" name="SI" target="_GargoBtSEey4HNSlVx0Eyg" source="_nv9lMBqgEey_Wfpuv-ZzVQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_64GwMRqfEey_Wfpuv-ZzVQ"/>
-        <condition xmi:type="expression:Expression" xmi:id="_64GwMhqfEey_Wfpuv-ZzVQ" name="false" content="return      .isHayNovedad();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_64GwMhqfEey_Wfpuv-ZzVQ" name="descargue - Descargue#isHayNovedad" content="isHayNovedad" interpreter="GROOVY" type="TYPE_JAVA_METHOD_CALL" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_gCAFsBzqEeyzbJ3SaIGN8w" name="descargue" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.Descargue"/>
+        </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_HgkskBqgEey_Wfpuv-ZzVQ" target="_HghCMBqgEey_Wfpuv-ZzVQ" source="_GargoBtSEey4HNSlVx0Eyg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_HgkskRqgEey_Wfpuv-ZzVQ"/>
