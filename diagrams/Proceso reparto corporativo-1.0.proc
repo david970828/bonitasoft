@@ -144,7 +144,7 @@
               <operator xmi:type="expression:Operator" xmi:id="_Ce2s6h21EeyOr_r9Xwj3Qg" type="ASSIGNMENT"/>
             </outputs>
           </connectors>
-          <connectors xmi:type="process:Connector" xmi:id="_cjFqkB21EeyOr_r9Xwj3Qg" name="Enviar planilla recoleccion" definitionId="email" event="ON_FINISH" definitionVersion="1.2.0">
+          <connectors xmi:type="process:Connector" xmi:id="_cjFqkB21EeyOr_r9Xwj3Qg" name="Enviar planilla recoleccion" definitionId="email" event="ON_FINISH" ignoreErrors="true" definitionVersion="1.2.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_cjFqkR21EeyOr_r9Xwj3Qg" definitionId="email" version="1.2.0" modelVersion="7.12.0-004">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cjGRoB21EeyOr_r9Xwj3Qg" key="smtpHost">
                 <expression xmi:type="expression:Expression" xmi:id="_cjGRoR21EeyOr_r9Xwj3Qg" name="smtp.gmail.com" content="smtp.gmail.com" returnTypeFixed="true"/>
@@ -174,8 +174,8 @@
                 <expression xmi:type="expression:Expression" xmi:id="_cjGRsR21EeyOr_r9Xwj3Qg" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cjGRsh21EeyOr_r9Xwj3Qg" key="to">
-                <expression xmi:type="expression:Expression" xmi:id="_cjGRsx21EeyOr_r9Xwj3Qg" name="to()" content="solicitud.emailCorporativo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_cjGRtB21EeyOr_r9Xwj3Qg" name="solicitud" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
+                <expression xmi:type="expression:Expression" xmi:id="_cjGRsx21EeyOr_r9Xwj3Qg" name="to()" content="return solicitud.emailCorporativo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VSvM8B22EeyOr_r9Xwj3Qg" name="solicitud" dataType="_6xmklBpDEey_Wfpuv-ZzVQ" className="com.company.model.BusinessObject"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cjGRtR21EeyOr_r9Xwj3Qg" key="bcc">
